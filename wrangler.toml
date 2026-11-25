@@ -1,0 +1,14 @@
+name = "xau-grid"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[[durable_objects.bindings]]
+name = "BOT"
+class_name = "GridBot"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GridBot"]
+
+[triggers]
+crons = ["*/5 * * * *"]
